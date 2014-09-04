@@ -1,0 +1,9 @@
+#carImage{
+	background-repeat:no-repeat;
+	background-size:contain;
+	min-width:500px;
+	min-height:333px;
+}
+a{
+	margin-right:5px;
+}

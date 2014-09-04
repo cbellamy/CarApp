@@ -1,0 +1,4 @@
+store obj vals in factory instead of controller
+use another function on stats page to pull obj vals
+integrate edmunds API
+integrate Firebase API

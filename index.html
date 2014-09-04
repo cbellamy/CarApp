@@ -1,0 +1,21 @@
+<html ng-app="carApp">
+	<head>
+		<title>
+			Buy It, Lease It, or Dump It!
+		</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body data-ng-controller="CarController">
+		<a href="#/">Home</a>
+		<a href="#/stats">Stats</a>
+		<!--load stuff into view -->
+		<div ng-view></div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"> </script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular-route.js"> </script>	
+		<script src="app.js"> </script>
+		<script src="factories/CarFactory.js"> </script>	
+		<script src="controllers/CarController.js"></script>	
+
+	</body>
+</html>

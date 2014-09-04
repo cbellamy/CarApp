@@ -1,0 +1,17 @@
+<input type="text" data-ng-model="searchText" placeholder="Filter Table..."/>
+<table>
+	<tr>
+		<th href="" ng-click="predicate='make'; reverse=false">Make</th>
+		<th href="" ng-click="predicate='model'; reverse=false">Model</th>
+		<th href="" ng-click="predicate='timesBought'; reverse=!reverse"># Bought</th>
+		<th href="" ng-click="predicate='timesLeased'; reverse=!reverse"># Leased</th>
+		<th href="" ng-click="predicate='timesDumped'; reverse=!reverse"># Dumped</th>
+	</tr>
+	<tr data-ng-repeat="car in cars | filter:searchText | orderBy:predicate:reverse">
+		<td>{{car.make}}</td>
+		<td>{{car.model}}</td>
+		<td>{{car.timesBought}}</td>
+		<td>{{car.timesLeased}}</td>
+		<td>{{car.timesDumped}}</td>
+	</tr>
+</table>
