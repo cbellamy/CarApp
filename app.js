@@ -3,11 +3,11 @@ var carApp = angular.module('carApp',['ngRoute']);
 carApp.config(function ($routeProvider) {
 
     $routeProvider.when('/', {
-        controller: 'CarController',
+        controller: 'carController',
         templateUrl: 'partials/main.html'
     })
     .when('/stats', {
-        controller: 'CarController',
+        controller: 'carController',
         templateUrl: 'partials/stats.html'
     })
     .otherwise({
