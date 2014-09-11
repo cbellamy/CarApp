@@ -1,0 +1,26 @@
+<div data-ng-controller="wheelController">
+	<input type="text" data-ng-model="searchText.make" placeholder="Filter by Make..."/>
+	<br/>
+	<input type="text" data-ng-model="searchText.category" placeholder="Filter by Category..."/>
+	<br/>
+	<input type="text" data-ng-model="maxWeight" placeholder="Filter by Max Weight..."/>
+	<br/>
+	<input type="text" data-ng-model="searchText.size" placeholder="Filter by Size..."/>
+	<br/>
+	<input type="text" data-ng-model="searchText.material" placeholder="Filter by Material..."/>
+	<br/>
+	<input type="text" data-ng-model="searchText.tireType" placeholder="Filter by Tire Type..."/>
+	<br/>
+	<table>
+		<tr>
+			<th href="" ng-click="predicate='make'; reverse=false">Make</th>
+			<th href="" ng-click="predicate='model'; reverse=false">Model</th>
+			<th href="" ng-click="predicate='category'; reverse=!reverse"># Category</th>
+		</tr>
+		<tr data-ng-repeat="wheel in wheels | filter:searchText | weightFilter:maxWeight | orderBy:predicate:reverse">
+			<td>{{wheel.make}}</td>
+			<td>{{wheel.model}}</td>
+			<td>{{wheel.category}}</td>
+		</tr>
+	</table>
+</div>

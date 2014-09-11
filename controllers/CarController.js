@@ -1,4 +1,4 @@
-carApp.controller('CarController',function($scope,CarFactory){
+carApp.controller('carController',function($scope,carFactory){
 
 	//sets up application
 	if(typeof $scope.cars === 'undefined'){
@@ -56,7 +56,7 @@ carApp.controller('CarController',function($scope,CarFactory){
 	//get a random index number based on array length
 	function getRandomIndex(arr){
 		var myNum = Math.round(Math.random() * arr.length) - 1;
-		return myNum > -0 ? myNum : 0;
+		return myNum >= 0 ? myNum : 0;
 	}
 
 
@@ -64,7 +64,7 @@ carApp.controller('CarController',function($scope,CarFactory){
 	function init(){
 
 		//simulating a firebase data store for car objects
-		$scope.cars = CarFactory.getCars();
+		$scope.cars = carFactory.getCars();
 
 		$scope.actions = ['Buy','Lease','Dump'];
 
@@ -72,9 +72,8 @@ carApp.controller('CarController',function($scope,CarFactory){
 
 		showNextCar();
 		
-		return $scope;
+		//return $scope;
 
 	}
-
 
 });

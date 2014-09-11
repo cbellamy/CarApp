@@ -1,4 +1,4 @@
-carApp.factory('CarFactory',function(){
+carApp.factory('carFactory',function(){
 	var cars = {
 			"car1-1234" : {
 				make : "BMW",
