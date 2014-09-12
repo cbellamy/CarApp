@@ -37,7 +37,7 @@ carApp.factory('carFactory',function(){
 
 		Object.keys(cars).forEach(function(key){
 			var car = cars[key];
-			obj = {
+			var obj = {
 				carID:key,
 				make:car.make,
 				model:car.model,
