@@ -32,6 +32,7 @@ carApp.controller('carController',function($scope,carFactory){
 		        break;
 		    case "Dump":
 		    	$scope.cars[index].timesDumped++;
+		    	break;
 		    default:
 		        break;
 		}
